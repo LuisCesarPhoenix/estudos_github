@@ -91,42 +91,40 @@ git commit -m "Refatoração do código
 - Ajustados logs para maior clareza"
 git push
 
-Se quiser fazer um versionamento(controle de versões), depois de gerar os commits, você pode executar um dos comandos a seguir:
+Como fazer um versionamento(controle de versões):
+-depois de gerar os commits, você pode executar um dos comandos a seguir:
 
-Caso seja uma versão de patch:
+a)Caso seja uma versão de patch:
 npm version patch
 v1.0.0 versão inicial
 v1.0.1 versão atualizada 
 A versão patch normalmente é usada para atualizações pequenas, correções, etc...
 
-Caso seja uma versão minor:
+b)Caso seja uma versão minor:
 npm version minor
 v1.0.0 versão inicial
 v1.1.0 versão atualizada 
 A versão minor normalmente é usada quando você adiciona alguma funcionalidade ou novo componente.
 
-Caso seja uma versão major:
+c)Caso seja uma versão major:
 npm version major
 v1.0.0 versão inicial
 v2.0.0 versão atualizada 
 A versão major normalmente é usada para atualizações significantes, que normalmente podem modificar dependências e tornar a 
-aplicação
-incompatível com algum outro sistema.
+aplicação incompatível com algum outro sistema.
 
 Exemplo: a aplicação está disponível com packages compatíveis com node 20, porém você adiciona um pacote que depende do node 22, 
 isso pode acarretar em incompatibilidade com projetos que usam o node 20. Então você atualiza para a versão major.
 
 Depois de fazer um dos 3 versionamentos(npm version patch, npm version minor ou npm version major), você executa o seguinte 
-comando:
-git push -u origin nome-da-branch --tags
+comando: git push -u origin nome-da-branch --tags
 
 Caso você esteja confiante na atualização, você pode enviar a nova tag direto para o master(ou main):
 git push -u origin master --tags
 
 Caso tenha algum erro, você pode voltar para a versão anterior executando o checkout:
 Exemplo: existem duas versões, a antiga(v1.0.1) e a nova(v1.0.2), caso tenha ocorrido alguma falha na v1.0.2, você executa o 
-checkout
-na versão v1.0.1
+checkout na versão v1.0.1
 git checkout v1.0.1 
 
 Como clonar o repositório do Github no VS Code:
@@ -169,9 +167,66 @@ executa o comando git branch para saber qual branch está sendo usada e depois v
 nome-da-branch.
 
 Para trocar para uma branch existente:
-$ git checkout master
+$ git branch (para listar todas as branches existentes)
+$ git checkout nome-da-branch ou git switch nome-da-branch(para trocar para a branch desejada)
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
+
+Como fazer um fork:
+Vamos detalhar os passos para fazer um fork e enviar suas alterações usando o VS Code.
+Observação: É preciso já ter o diretório baixado na sua máquina e aberto no VS Code, e sua conta do GitHub deve estar conectada no
+VS Code.
+
+1. Fazer o Fork no GitHub (pelo navegador):
+a)Acesse o repositório no GitHub:
+-Abra o navegador e vá para o repositório que você deseja fazer o fork.
+b)Clique no botão "Fork":
+-No canto superior direito da página do repositório, clique no botão "Fork".
+-Selecione a sua conta do GitHub para onde o fork será criado.
+c)Aguarde a criação do fork:
+-O GitHub criará uma cópia do repositório na sua conta.
+
+2. Adicionar o Repositório Remoto do Seu Fork no VS Code:
+a)Copie a URL do seu fork:
+-No GitHub, vá para o seu fork do repositório.
+-Clique no botão "Code" e copie a URL do repositório (HTTPS ou SSH).
+b)Abra o terminal integrado no VS Code:
+-Vá para "Terminal" > "Novo Terminal" no menu do VS Code ou CTRL+j.
+c)Adicione o repositório remoto:
+-No terminal, execute o seguinte comando, substituindo URL-do-seu-fork pela URL que você copiou:
+-git remote add fork URL-do-seu-fork
+d)Verifique os repositórios remotos:
+-Execute o seguinte comando para verificar se o repositório remoto foi adicionado corretamente: git remote -v
+-Você deve ver o repositório original (origin) e o seu fork (fork) na lista.
+
+3. Enviar as Alterações para o Seu Fork:
+a)Faça suas alterações no VS Code:
+-Edite os arquivos no VS Code conforme necessário.
+b)Adicione as alterações ao staging area:
+-No terminal, execute o seguinte comando: git add caminhnho-do-arq/diretório/arquivo.ext
+c)Faça um commit das alterações:
+-No terminal, execute o seguinte comando, substituindo "Mensagem do commit" por uma mensagem descritiva:
+git commit -m "Mensagem do commit"
+d)Envie as alterações para o seu fork:
+-No terminal, execute o seguinte comando: git push fork nome-da-branch
+-Se for a primeira vez que você envia para este branch, você pode precisar usar: git push -u fork nome-da-branch
+
+4. Criar um Pull Request (PR) no GitHub:
+a)Acesse o seu fork no GitHub:
+-Abra o navegador e vá para o seu fork do repositório.
+b)Clique no botão "Compare & pull request":
+-O GitHub deve exibir um aviso indicando que você enviou um novo branch.
+-Clique no botão "Compare & pull request".
+c)Preencha os detalhes do PR:
+-Adicione um título e uma descrição para o seu PR.
+-Certifique-se de que o branch base seja o branch correto no repositório original.
+d)Clique no botão "Create pull request":
+-O seu PR será criado e enviado para o repositório original.
+
+Dicas:
+1-Use mensagens de commit descritivas para explicar suas alterações.
+2-Mantenha seu fork sincronizado com o repositório original.
+3-Siga as diretrizes de contribuição do projeto original.
 
 Quick setup — if you’ve done this kind of thing before
 or	
