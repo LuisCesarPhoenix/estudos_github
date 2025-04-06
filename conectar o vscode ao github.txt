@@ -45,6 +45,9 @@ Passo 5: Enviar os arquivos para o GitHub
 a) Use o comando git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub. No meu caso eu usei 
 o master, mas você pode substituir. Porém o mais indicado é criar uma branch de trabalho para cada atualização e depois de revisar, 
 discutir as alterações e mesclá-las à branch principal, excluir essa branch temporária.
+b)Para criar uma branch diferente, antes de fazer um git push, você executa o comando git checkout -b nome-da-branch, em seguida 
+executa o comando git branch para saber qual branch está sendo usada e depois você executa o comando git push -u origin 
+nome-da-branch.
 
 Passo 6: Sincronizar alterações futuras
 1-Sempre que você fizer alterações no seu código no VS Code:
@@ -52,7 +55,7 @@ a) Use git add caminhnho-do-arq./diretório/arquivo para adicionar as alteraçõ
 Exemplo: git add src/config/mongoConfig.js
 b) Use o comando git commit -m "Mensagem descritiva das alterações" para criar um novo commit.
 Exemplo: git commit -m "Refatorado método queryMongoDB para melhorar reutilização"
-c) Use git push para enviar as alterações para o GitHub.
+c) Use git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub.
 
 Dicas adicionais:
 -Arquivo .gitignore: Crie um arquivo .gitignore na raiz do seu projeto para ignorar arquivos e pastas que você não quer enviar 
@@ -161,10 +164,6 @@ atualizações.
 É melhor criar branches de acordo com o assunto que está você alterando.
 Criar branches específicas para cada funcionalidade ou correção ajuda a manter o repositório organizado e facilita a revisão de 
 código. 
-
-Para criar uma branch diferente, antes de fazer um git push, você executa o comando git checkout -b nome-da-branch, em seguida 
-executa o comando git branch para saber qual branch está sendo usada e depois você executa o comando git push -u origin 
-nome-da-branch.
 
 Para trocar para uma branch existente:
 $ git branch (para listar todas as branches existentes)
