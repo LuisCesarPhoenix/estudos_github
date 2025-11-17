@@ -13,58 +13,59 @@ facilitar a integração com o GitHub.
 
 ### Passo 1: Criar um repositório no GitHub
 
-a) Acesse sua conta no GitHub e clique no botão "New" (Novo) para criar um novo repositório.
-b) Dê um nome ao seu repositório (por exemplo, "meu-projeto").
-c) Você pode adicionar uma descrição (opcional).
-d) Escolha se o repositório será público ou privado.
-e) Marque a opção "Add a README file" (Adicionar um arquivo README) para criar um arquivo de documentação inicial.
-f) Clique em "Create repository" (Criar repositório).
+a) Acesse sua conta no GitHub e clique no botão "New" (Novo) para criar um novo repositório.<br/>
+b) Dê um nome ao seu repositório (por exemplo, "meu-projeto").\\
+c) Você pode adicionar uma descrição (opcional).  
+d) Escolha se o repositório será público ou privado.<br/>
+e) Marque a opção "Add a README file" (Adicionar um arquivo README) para criar um arquivo de documentação inicial.\\
+f) Clique em "Create repository" (Criar repositório).  
 
 ### Passo 2: Inicializar o Git no seu projeto (VS Code)
 
-a) Logue com a sua conta do GitHub no VS Code.
-b) Abra a pasta do seu projeto no VS Code.
-c) Abra o terminal integrado do VS Code (Visualizar > Terminal > New terminal ou CTRL + J).
-observação: ALT + Z quebra a linha.
-d) No terminal, execute o seguinte comando para inicializar um repositório Git dentro do repositório local do seu projeto: git init
-e) dê o comando git config --global user.email "cesarrodriguesgoncalves@hotmail.com" (substitua pelo seu email)
-f) dê o comando git config --global user.name "LuisCesarPhoenix" (substitua pelo seu nome de usuário) 
+a) Logue com a sua conta do GitHub no VS Code.<br/>
+b) Abra a pasta do seu projeto no VS Code.\\
+c) Abra o terminal integrado do VS Code (Visualizar > Terminal > New terminal ou CTRL + J).  
+observação: ALT + Z quebra a linha.  
+d) No terminal, execute o seguinte comando para inicializar um repositório Git dentro do repositório local do seu projeto: git init<br/>
+e) dê o comando git config --global user.email "cesarrodriguesgoncalves@hotmail.com" (substitua pelo seu email)\\
+f) dê o comando git config --global user.name "LuisCesarPhoenix" (substitua pelo seu nome de usuário)<br/>
+
 Observação:
-O --global define essa configuração para todos os repositórios no seu computador.
-Se quiser configurar apenas para um projeto específico, remova --global e execute dentro da pasta do projeto.
+- O --global define essa configuração para todos os repositórios no seu computador.
+- Se quiser configurar apenas para um projeto específico, remova --global e execute dentro da pasta do projeto.
 
 ### Passo 3: Conectar o repositório local ao repositório remoto (GitHub)
 
 a) Dentro do repositório que você criou no GitHub, clique no botão verde escrito Code e copie a URL do repositório. A URL (HTTPS 
-ou SSH) do repositório termina com .git
-b) No terminal do VSCode, execute o seguinte comando: 
-- git remote add origin https://github.com/LuisCesarPhoenix/curso-youtube-react-next-typescript.git 
+ou SSH) do repositório termina com .git<br/>
+b) No terminal do VSCode, execute o seguinte comando:\\
+- git remote add origin https://github.com/LuisCesarPhoenix/curso-youtube-react-next-typescript.git   
 - substitua pela URL do seu repositório.
 
 ### Passo 4: Adicionar e commitar os arquivos
 
-a) Use o comando git add caminhnho-do-arq/diretório/arquivo para adicionar os arquivos do seu projeto à área de preparação do Git.
-Exemplo: git add src/controllers/migrationController.js
+a) Use o comando git add caminhnho-do-arq/diretório/arquivo para adicionar os arquivos do seu projeto à área de preparação do Git.  
+Exemplo: git add src/controllers/migrationController.js\\
 b) Use o comando git commit -m "Mensagem inicial do commit" para criar um commit para cada arquivo. Substitua "Mensagem inicial do 
-commit" por uma mensagem descritiva.
+commit" por uma mensagem descritiva.<br/>
 Exemplo: git commit -m "Corrigida conexão no migrationController.js"
 
 ### Passo 5: Enviar os arquivos para o GitHub
 
 a) Use o comando git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub. No meu caso eu usei 
 o master, mas você pode substituir. Porém o mais indicado é criar uma branch de trabalho para cada atualização e depois de revisar, 
-discutir as alterações e mesclá-las à branch principal, excluir essa branch temporária.
+discutir as alterações e mesclá-las à branch principal, excluir essa branch temporária.<br/>
 b)Para criar uma branch diferente, antes de fazer um git push, você pode executar o comando git checkout -b nome-da-branch, 
 em seguida executa o comando git branch para saber qual branch está sendo usada e depois você executa o comando git push -u origin 
 nome-da-branch.
 
 ### Passo 6: Sincronizar alterações futuras
 
-Sempre que você fizer alterações no seu código no VS Code:
-a) Use git add caminhnho-do-arq./diretório/arquivo para adicionar as alterações.
-Exemplo: git add src/config/mongoConfig.js
-b) Use o comando git commit -m "Mensagem descritiva das alterações" para criar um novo commit.
-Exemplo: git commit -m "Refatorado método queryMongoDB para melhorar reutilização"
+Sempre que você fizer alterações no seu código no VS Code:<br/>
+a) Use git add caminhnho-do-arq./diretório/arquivo para adicionar as alterações.\\
+Exemplo: git add src/config/mongoConfig.js  
+b) Use o comando git commit -m "Mensagem descritiva das alterações" para criar um novo commit.<br/>
+Exemplo: git commit -m "Refatorado método queryMongoDB para melhorar reutilização"\\
 c) Use git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub.
 
 ### Dicas adicionais:
