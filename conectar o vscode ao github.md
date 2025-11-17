@@ -114,89 +114,96 @@ Ajustados logs para maior clareza"
 git push
 
 ```text
-************************************************************************************************************
+
 ```
 
 ## Como fazer um versionamento(controle de versões):
 
 ### Depois de gerar os commits, você pode executar um dos comandos a seguir:
 
-a)Caso seja uma versão de patch:
-npm version patch
-v1.0.0 versão inicial
-v1.0.1 versão atualizada 
+a) Caso seja uma versão de patch:
+- npm version patch
+- v1.0.0 versão inicial
+- v1.0.1 versão atualizada 
+
 A versão patch normalmente é usada para atualizações pequenas, correções, etc...
 
-b)Caso seja uma versão minor:
-npm version minor
-v1.0.0 versão inicial
-v1.1.0 versão atualizada 
+b) Caso seja uma versão minor:
+- npm version minor
+- v1.0.0 versão inicial
+- v1.1.0 versão atualizada 
+
 A versão minor normalmente é usada quando você adiciona alguma funcionalidade ou novo componente.
 
-c)Caso seja uma versão major:
-npm version major
-v1.0.0 versão inicial
-v2.0.0 versão atualizada 
+c) Caso seja uma versão major:
+- npm version major
+- v1.0.0 versão inicial
+- v2.0.0 versão atualizada 
+
 A versão major normalmente é usada para atualizações significantes, que normalmente podem modificar dependências e tornar a 
 aplicação incompatível com algum outro sistema.
 
-Exemplo: a aplicação está disponível com packages compatíveis com node 20, porém você adiciona um pacote que depende do node 22, 
+Exemplo:<br/>
+A aplicação está disponível com packages compatíveis com node 20, porém você adiciona um pacote que depende do node 22, 
 isso pode acarretar em incompatibilidade com projetos que usam o node 20. Então você atualiza para a versão major.
 
 Depois de fazer um dos 3 versionamentos(npm version patch, npm version minor ou npm version major), você executa o seguinte 
-comando: git push -u origin nome-da-branch --tags
+comando: 
+- git push -u origin nome-da-branch --tags
 
 Caso você esteja confiante na atualização, você pode enviar a nova tag direto para o master(ou main):
-git push -u origin master --tags
+- git push -u origin master --tags
 
-Caso tenha algum erro, você pode voltar para a versão anterior executando o checkout:
-Exemplo: existem duas versões, a antiga(v1.0.1) e a nova(v1.0.2), caso tenha ocorrido alguma falha na v1.0.2, você executa o 
+Caso tenha algum erro, você pode voltar para a versão anterior executando o checkout:<br/>
+Exemplo:<br/>
+Existem duas versões, a antiga(v1.0.1) e a nova(v1.0.2), caso tenha ocorrido alguma falha na v1.0.2, você executa o 
 checkout na versão v1.0.1
-git checkout v1.0.1 
+- git checkout v1.0.1 
 
-Como clonar o repositório do Github no VS Code:
-Clonar um repositório do GitHub diretamente no VS Code é uma maneira eficiente de começar a trabalhar em projetos. Aqui estão os 
-passos para realizar essa ação:
+```text
 
-1. Abra a Paleta de Comandos:
-No VS Code, pressione Ctrl + Shift + P (Windows/Linux) ou Cmd + Shift + P (Mac) para abrir a Paleta de Comandos.
+```
 
-2. Digite "Git: Clone":
-Na Paleta de Comandos, digite "Git: Clone" e selecione a opção correspondente.
+## Como clonar o repositório do Github no VS Code:
 
-3. Forneça a URL do Repositório:
-Você será solicitado a fornecer a URL do repositório Git que deseja clonar. Cole a URL do repositório GitHub que você copiou 
+### Clonar um repositório do GitHub diretamente no VS Code é uma maneira eficiente de começar a trabalhar em projetos. Aqui estão os passos para realizar essa ação:
+
+1) Abra a Paleta de Comandos:
+- No VS Code, pressione Ctrl + Shift + P (Windows/Linux) ou Cmd + Shift + P (Mac) para abrir a Paleta de Comandos.
+2) Digite "Git: Clone":
+- Na Paleta de Comandos, digite "Git: Clone" e selecione a opção correspondente.
+3) Forneça a URL do Repositório:
+- Você será solicitado a fornecer a URL do repositório Git que deseja clonar. Cole a URL do repositório GitHub que você copiou 
 anteriormente.
-Login no Github: Se você estiver logado no github pelo VS code, ele apresentará seus repositórios para clonagem, facilitando o 
-processo.
+4) Login no Github: 
+- Se você estiver logado no github pelo VS code, ele apresentará seus repositórios para clonagem, facilitando o processo.
+5) Escolha o Diretório de Destino:
+- Selecione a pasta onde você deseja clonar o repositório.
+6) Aguarde a Conclusão:
+- O VS Code irá lidar com o processo de clonagem. Aguarde até que o processo seja concluído.
+- O VS code irá perguntar se você deseja abrir o repositório clonado, clique em abrir.
 
-4. Escolha o Diretório de Destino:
-Selecione a pasta onde você deseja clonar o repositório.
-
-5. Aguarde a Conclusão:
-O VS Code irá lidar com o processo de clonagem. Aguarde até que o processo seja concluído.
-O VS code irá perguntar se você deseja abrir o repositório clonado, clique em abrir.
-
-Dicas adicionais:
-Extensão Git: O VS Code possui suporte integrado para Git, mas certifique-se de que a extensão Git esteja habilitada.
-Terminal integrado: Você também pode usar o terminal integrado do VS Code para executar o comando git clone diretamente. Para 
-abrir 
-o terminal, pressione Ctrl + j ou Visualizar(...) > Terminal > New terminal(Windows/Linux) ou Cmd + j (Mac).
+Dicas adicionais:<br/>
+Extensão Git: 
+- O VS Code possui suporte integrado para Git, mas certifique-se de que a extensão Git esteja habilitada.
+Terminal integrado: 
+- Você também pode usar o terminal integrado do VS Code para executar o comando git clone diretamente. 
+- Para abrir o terminal, pressione Ctrl + j ou Visualizar(...) > Terminal > New terminal(Windows/Linux) ou Cmd + j (Mac).
 
 *Pesquisar sobre merger e versionamento(controle de versões)
 
-É melhor criar branches de acordo com o assunto que está você alterando.
-Criar branches específicas para cada funcionalidade ou correção ajuda a manter o repositório organizado e facilita a revisão de 
+É melhor criar branches de acordo com o assunto que está você alterando:<br/>
+- Criar branches específicas para cada funcionalidade ou correção ajuda a manter o repositório organizado e facilita a revisão de 
 código. 
 
 Para trocar para uma branch existente:
-$ git branch (para listar todas as branches existentes)
-$ git checkout nome-da-branch ou git switch nome-da-branch(para trocar para a branch desejada)
-Switched to branch 'master'
-Your branch is up to date with 'origin/master'.
+- git branch (para listar todas as branches existentes)
+- git checkout nome-da-branch ou git switch nome-da-branch(para trocar para a branch desejada)
+- Switched to branch 'master'
+- Your branch is up to date with 'origin/master'.
 
 ```text
-************************************************************************************************************
+
 ```
 
 ## Como fazer um fork:
@@ -266,7 +273,7 @@ Você já pode:
 - E enviar para o seu fork com: git push origin main
 
 ```text
-************************************************************************************************************
+
 ```
 
 ## CRIAR UM PULL REQUEST (PR) NO GITHUB:
@@ -306,7 +313,7 @@ Dicas:
 ```
 
 ```text
-************************************************************************************************************
+
 ```
 
 ## COMO APAGAR UMA BRANCH
@@ -335,9 +342,10 @@ Se a branch também existe no seu GitHub, apague assim:
 Quick setup — if you’ve done this kind of thing before  
 or  	
 https://github.com/LuisCesarPhoenix/n8n.git  
-Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.  
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
 
-…or create a new repository on the command line  
+…or create a new repository on the command line
+  
 echo "# n8n" >> README.md  
 git init  
 git add README.md  
