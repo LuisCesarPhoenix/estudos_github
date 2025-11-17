@@ -2,7 +2,7 @@
 
 ## Pré-requisitos:
 
-text```
+```text
 a) Conta no GitHub: Se você ainda não tem uma, crie uma conta gratuita em https://github.com
 b) Git instalado: O Git é essencial para controlar as versões do seu código. Você pode baixá-lo em https://git-scm.com/
 c) VS Code instalado: Certifique-se de ter o Visual Studio Code instalado no seu computador. Você pode baixá-lo em 
@@ -69,7 +69,7 @@ c) Use git push -u origin nome-da-branch para enviar seus commits para o reposit
 
 ### Dicas adicionais:
 
-text```
+```text
 -Arquivo .gitignore: Crie um arquivo .gitignore na raiz do seu projeto para ignorar arquivos e pastas que você não quer enviar 
 para o GitHub (por exemplo, arquivo de configuração de variáveis de ambiente(.env), pastas de dependências,etc).
 -Branches: Use branches para desenvolver novas funcionalidades ou corrigir bugs sem afetar a versão principal do seu código.
@@ -109,7 +109,7 @@ git commit -m "Refatoração do código
 - Ajustados logs para maior clareza"
 git push
 
-text```
+```text
 ************************************************************************************************************
 ```
 
@@ -180,6 +180,7 @@ abrir
 o terminal, pressione Ctrl + j ou Visualizar(...) > Terminal > New terminal(Windows/Linux) ou Cmd + j (Mac).
 
 *Pesquisar sobre merger e versionamento(controle de versões)
+
 É melhor criar branches de acordo com o assunto que está você alterando.
 Criar branches específicas para cada funcionalidade ou correção ajuda a manter o repositório organizado e facilita a revisão de 
 código. 
@@ -190,7 +191,7 @@ $ git checkout nome-da-branch ou git switch nome-da-branch(para trocar para a br
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 
-text```
+```text
 ************************************************************************************************************
 ```
 
@@ -198,7 +199,7 @@ text```
 
 ### Vamos detalhar os passos para fazer um fork e enviar suas alterações usando o VS Code.
 
-```
+```text
 Pré-requisitos:
 
 a) Conta no GitHub: Se você ainda não tem uma, crie uma conta gratuita em https://github.com
@@ -260,7 +261,7 @@ Você já pode:
 - Fazer commits com git add . && git commit -m "mensagem"
 - E enviar para o seu fork com: git push origin main
 
-text```
+```text
 ************************************************************************************************************
 ```
 
@@ -293,14 +294,35 @@ G) Clique no botão "Create pull request":
 4 - Depois eu vou enviar a Pull Request da minha branch temporária para a branch secundária do repositório original.
 5 - Quando eu estiver enviando uma Pull Request para o fork jamais eu vou clicar no Merge
 
-text```
+```text
 Dicas:
 1-Use mensagens de commit descritivas para explicar suas alterações.
 2-Mantenha seu fork sincronizado com o repositório original.
 3-Siga as diretrizes de contribuição do projeto original.
 ```
 
-text```
+```text
+************************************************************************************************************
+```
+
+## COMO APAGAR UMA BRANCH
+
+### 1. Apagar a branch local
+
+Como a branch staging já existe, apague assim:
+- Deletar branch local (SE NÃO estiver nela)
+- git branch -D staging
+
+Obs: Se você estiver dentro da branch staging, mude para outra antes:
+- git checkout main
+- git branch -D staging
+
+### 2. Apagar a branch no GitHub (branch remota)
+
+Se a branch também existe no seu GitHub, apague assim:
+- git push origin --delete staging
+
+```text
 ************************************************************************************************************
 ```
 
@@ -325,6 +347,10 @@ git remote add origin https://github.com/LuisCesarPhoenix/n8n.git
 git branch -M main
 git push -u origin main
 
-## Sintaxe básica de formatação markdown(.md)
+```text
+************************************************************************************************************
+```
+
+## SINTAXE BÁSICA DE FORMATAÇÃO MARKDOWN(.md)
 
 https://www.markdownguide.org/basic-syntax/
