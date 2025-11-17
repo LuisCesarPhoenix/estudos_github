@@ -14,21 +14,23 @@ facilitar a integração com o GitHub.
 ### Passo 1: Criar um repositório no GitHub
 
 a) Acesse sua conta no GitHub e clique no botão "New" (Novo) para criar um novo repositório.<br/>
-b) Dê um nome ao seu repositório (por exemplo, "meu-projeto").\\
-c) Você pode adicionar uma descrição (opcional).  
+b) Dê um nome ao seu repositório (por exemplo, "meu-projeto").<br/>
+c) Você pode adicionar uma descrição (opcional).<br/>
 d) Escolha se o repositório será público ou privado.<br/>
-e) Marque a opção "Add a README file" (Adicionar um arquivo README) para criar um arquivo de documentação inicial.\\
+e) Marque a opção "Add a README file" (Adicionar um arquivo README) para criar um arquivo de documentação inicial.<br/>
 f) Clique em "Create repository" (Criar repositório).  
 
 ### Passo 2: Inicializar o Git no seu projeto (VS Code)
 
 a) Logue com a sua conta do GitHub no VS Code.<br/>
-b) Abra a pasta do seu projeto no VS Code.\\
-c) Abra o terminal integrado do VS Code (Visualizar > Terminal > New terminal ou CTRL + J).  
-observação: ALT + Z quebra a linha.  
-d) No terminal, execute o seguinte comando para inicializar um repositório Git dentro do repositório local do seu projeto: git init<br/>
-e) dê o comando git config --global user.email "cesarrodriguesgoncalves@hotmail.com" (substitua pelo seu email)\\
-f) dê o comando git config --global user.name "LuisCesarPhoenix" (substitua pelo seu nome de usuário)<br/>
+b) Abra a pasta do seu projeto no VS Code.<br/>
+c) Abra o terminal integrado do VS Code (Visualizar > Terminal > New terminal ou CTRL + J).<br/>
+- observação: ALT + Z quebra a linha.<br/>
+d) No terminal, execute o seguinte comando para inicializar um repositório Git dentro do repositório local do seu projeto: 
+- git init<br/>
+e) dê os seguintes comandos no git:
+- config --global user.email "cesarrodriguesgoncalves@hotmail.com" (substitua pelo seu email)
+- git config --global user.name "LuisCesarPhoenix" (substitua pelo seu nome de usuário)
 
 Observação:
 - O --global define essa configuração para todos os repositórios no seu computador.
@@ -38,34 +40,33 @@ Observação:
 
 a) Dentro do repositório que você criou no GitHub, clique no botão verde escrito Code e copie a URL do repositório. A URL (HTTPS 
 ou SSH) do repositório termina com .git<br/>
-b) No terminal do VSCode, execute o seguinte comando:\\
+b) No terminal do VSCode, execute o seguinte comando:
 - git remote add origin https://github.com/LuisCesarPhoenix/curso-youtube-react-next-typescript.git   
 - substitua pela URL do seu repositório.
 
 ### Passo 4: Adicionar e commitar os arquivos
 
 a) Use o comando git add caminhnho-do-arq/diretório/arquivo para adicionar os arquivos do seu projeto à área de preparação do Git.  
-Exemplo: git add src/controllers/migrationController.js\\
+Exemplo: git add src/controllers/migrationController.js<br/>
 b) Use o comando git commit -m "Mensagem inicial do commit" para criar um commit para cada arquivo. Substitua "Mensagem inicial do 
-commit" por uma mensagem descritiva.<br/>
-Exemplo: git commit -m "Corrigida conexão no migrationController.js"
+commit" por uma mensagem descritiva.
+- Exemplo: git commit -m "Corrigida conexão no migrationController.js"
 
 ### Passo 5: Enviar os arquivos para o GitHub
 
-a) Use o comando git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub. No meu caso eu usei 
-o master, mas você pode substituir. Porém o mais indicado é criar uma branch de trabalho para cada atualização e depois de revisar, 
-discutir as alterações e mesclá-las à branch principal, excluir essa branch temporária.<br/>
-b)Para criar uma branch diferente, antes de fazer um git push, você pode executar o comando git checkout -b nome-da-branch, 
-em seguida executa o comando git branch para saber qual branch está sendo usada e depois você executa o comando git push -u origin 
-nome-da-branch.
+- Use o comando git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub. 
+- No meu caso eu usei o master, mas você pode substituir. 
+- Porém o mais indicado é criar uma branch de trabalho para cada atualização e depois de revisar, discutir e mesclar as alterações à branch principal, excluir essa branch temporária.
+- Para criar uma branch diferente, antes de fazer um git push, você pode executar o comando git checkout -b nome-da-branch 
+- Em seguida executa o comando git branch para saber qual branch está sendo usada e depois você executa o comando git push -u origin nome-da-branch.
 
 ### Passo 6: Sincronizar alterações futuras
 
 Sempre que você fizer alterações no seu código no VS Code:<br/>
-a) Use git add caminhnho-do-arq./diretório/arquivo para adicionar as alterações.\\
-Exemplo: git add src/config/mongoConfig.js  
+a) Use git add caminhnho-do-arq./diretório/arquivo para adicionar as alterações.<br/>
+- Exemplo: git add src/config/mongoConfig.js  
 b) Use o comando git commit -m "Mensagem descritiva das alterações" para criar um novo commit.<br/>
-Exemplo: git commit -m "Refatorado método queryMongoDB para melhorar reutilização"\\
+- Exemplo: git commit -m "Refatorado método queryMongoDB para melhorar reutilização"
 c) Use git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub.
 
 ### Dicas adicionais:
@@ -78,36 +79,38 @@ para o GitHub (por exemplo, arquivo de configuração de variáveis de ambiente(
 principal.
 ```
 
-## Quando você altera vários arquivos de uma vez, pode seguir dois caminhos no VS Code para descrever cada alteração de forma clara 
-## antes de fazer o commit:
+## Quando você altera vários arquivos de uma vez, pode seguir dois caminhos no VS Code para descrever cada alteração de forma clara antes de fazer o commit:
 
 ### 1) Fazendo commits para cada arquivo:
 
-a)Usando o Terminal (Manual para cada Arquivo)
+a) Usando o Terminal (Manual para cada Arquivo)<br/>
 Se quiser descrever alterações separadamente para cada arquivo modificado, pode adicionar os arquivos individualmente e fazer 
 commits distintos:
-git add src/controllers/migrationController.js
-git commit -m "Corrigida conexão no migrationController.js"
-git add src/config/mongoConfig.js
-git commit -m "Refatorado método queryMongoDB para melhorar reutilização"
-git push
+- git add src/controllers/migrationController.js
+- git commit -m "Corrigida conexão no migrationController.js"
+- git add src/config/mongoConfig.js
+- git commit -m "Refatorado método queryMongoDB para melhorar reutilização"
+- git push
+
 Observação: utilize o comando git status para ver o caminho de cada arquivo alterado.
 
-b)Usando o VS Code (Interface Gráfica)
-Abra o VS Code e clique no ícone do Git (canto esquerdo, terceiro ícone).
-Você verá a lista de arquivos modificados em "Changes".
-Clique com o botão direito no arquivo ou no sinal de +(Stage Changes) do arquivo que quer commitar primeiro.
-Digite uma mensagem de commit específica para aquele arquivo e clique em "Commit".
-Repita o processo para os outros arquivos, adicionando mensagens personalizadas.
-Depois, clique em "Sync Changes" (ou rode git push no terminal) para enviar os commits para o repositório remoto.
+b) Usando o VS Code (Interface Gráfica)
+- Abra o VS Code e clique no ícone do Git (canto esquerdo, terceiro ícone).
+- Você verá a lista de arquivos modificados em "Changes".
+- Clique com o botão direito no arquivo ou no sinal de +(Stage Changes) do arquivo que quer commitar primeiro.
+- Digite uma mensagem de commit específica para aquele arquivo e clique em "Commit".
+- Repita o processo para os outros arquivos, adicionando mensagens personalizadas.
+- Depois, clique em "Sync Changes" (ou rode git push no terminal) para enviar os commits para o repositório remoto.
 
 ### 2 - Fazendo um Commit Único Com Uma Mensagem Detalhada
 
 Se quiser fazer um único commit, mas com uma descrição mais detalhada, pode usar este comando:
-git commit -m "Refatoração do código
-- Corrigida conexão no migrationController.js
-- Melhorada reutilização do queryMongoDB no mongoConfig.js
-- Ajustados logs para maior clareza"
+
+git commit -m "Refatoração do código<br/>
+Corrigida conexão no migrationController.js<br/>
+Melhorada reutilização do queryMongoDB no mongoConfig.js<br/>
+Ajustados logs para maior clareza"
+
 git push
 
 ```text
