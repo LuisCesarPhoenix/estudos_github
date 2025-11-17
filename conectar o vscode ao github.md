@@ -288,11 +288,11 @@ G) Clique no botão "Create pull request":
 
 ### Observação: 
 
-1 - Eu nunca vou enviar o commit para a branch main do repositório original.
-2 - Eu vou criar uma branch temporária no meu repositório. 
-3 - git checkout -b nome-da-branch
-4 - Depois eu vou enviar a Pull Request da minha branch temporária para a branch secundária do repositório original.
-5 - Quando eu estiver enviando uma Pull Request para o fork jamais eu vou clicar no Merge
+- Eu nunca vou enviar o commit para a branch main do repositório original.
+- Eu vou criar uma branch temporária no meu repositório. 
+- git checkout -b nome-da-branch
+- Depois eu vou enviar a Pull Request da minha branch temporária para a branch secundária do repositório original.
+- Quando eu estiver enviando uma Pull Request para o fork jamais eu vou clicar no Merge
 
 ```text
 Dicas:
@@ -328,24 +328,23 @@ Se a branch também existe no seu GitHub, apague assim:
 
 ## CRIANDO UM NOVO REPOSITÓRIO NO GITHUB
 
-Quick setup — if you’ve done this kind of thing before
-or	
-https://github.com/LuisCesarPhoenix/n8n.git
-Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and 
-.gitignore.
+Quick setup — if you’ve done this kind of thing before  
+or  	
+https://github.com/LuisCesarPhoenix/n8n.git  
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.  
 
-…or create a new repository on the command line
-echo "# n8n" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/LuisCesarPhoenix/n8n.git
-git push -u origin main
-…or push an existing repository from the command line
-git remote add origin https://github.com/LuisCesarPhoenix/n8n.git
-git branch -M main
-git push -u origin main
+…or create a new repository on the command line  
+echo "# n8n" >> README.md  
+git init  
+git add README.md  
+git commit -m "first commit"  
+git branch -M main  
+git remote add origin https://github.com/LuisCesarPhoenix/n8n.git  
+git push -u origin main  
+…or push an existing repository from the command line  
+git remote add origin https://github.com/LuisCesarPhoenix/n8n.git  
+git branch -M main  
+git push -u origin main  
 
 ```text
 ************************************************************************************************************
