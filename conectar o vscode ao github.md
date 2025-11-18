@@ -145,7 +145,7 @@ aplicação incompatível com algum outro sistema.
 
 Exemplo:<br/>
 A aplicação está disponível com packages compatíveis com node 20, porém você adiciona um pacote que depende do node 22, 
-isso pode acarretar em incompatibilidade com projetos que usam o node 20. Então você atualiza para a versão major.
+isso pode acarretar incompatibilidade com projetos que usam o node 20. Então você atualiza para a versão major.
 
 Depois de fazer um dos 3 versionamentos(npm version patch, npm version minor ou npm version major), você executa o seguinte 
 comando: 
@@ -320,11 +320,11 @@ Dicas:
 
 ### 1. Apagar a branch local
 
-Como a branch nome-da-branch já existe, apague assim:
+Como a branch já existe, apague assim:
 - Deletar branch local (SE NÃO estiver nela)
 - git branch -D nome-da-branch
 
-Obs: Se você estiver dentro da branch nome-da-branch, mude para outra antes:
+Obs: Se você estiver dentro da branch, mude para outra antes:
 - git checkout nome-da-branch ou ou git switch nome-da-branch
 - git branch -D nome-da-branch
 
