@@ -20,7 +20,7 @@ d) Escolha se o repositório será público ou privado.<br/>
 e) Marque a opção "Add a README file" (Adicionar um arquivo README) para criar um arquivo de documentação inicial.<br/>
 f) Clique em "Create repository" (Criar repositório).  
 
-### Passo 2: Inicializar o Git no seu projeto (VS Code)
+### Passo 2: Inicializar o Git no repositório local do seu projeto (VS Code)
 
 a) Logue com a sua conta do GitHub no VS Code.<br/>
 b) Abra a pasta do seu projeto no VS Code.<br/>
@@ -114,7 +114,7 @@ Ajustados logs para maior clareza"
 git push
 
 ```text
-***********************************************************************************************************************
+****************************************************************************************************************************
 ```
 
 ## Como fazer um versionamento(controle de versões):
@@ -161,7 +161,7 @@ checkout na versão v1.0.1
 - git checkout v1.0.1 
 
 ```text
-***********************************************************************************************************************
+****************************************************************************************************************************
 ```
 
 ## Como clonar o repositório do Github no VS Code:
@@ -184,26 +184,23 @@ anteriormente.
 - O VS code irá perguntar se você deseja abrir o repositório clonado, clique em abrir.
 
 Dicas adicionais:<br/>
-Extensão Git: 
+
+1) Extensão Git: 
 - O VS Code possui suporte integrado para Git, mas certifique-se de que a extensão Git esteja habilitada.
-Terminal integrado: 
 - Você também pode usar o terminal integrado do VS Code para executar o comando git clone diretamente. 
 - Para abrir o terminal, pressione Ctrl + j ou Visualizar(...) > Terminal > New terminal(Windows/Linux) ou Cmd + j (Mac).
 
-*Pesquisar sobre merger e versionamento(controle de versões)
-
-É melhor criar branches de acordo com o assunto que está você alterando:<br/>
+2) Branches de trabalho:
+- É melhor criar branches de acordo com o assunto que você está alterando.
 - Criar branches específicas para cada funcionalidade ou correção ajuda a manter o repositório organizado e facilita a revisão de 
 código. 
 
-Para trocar para uma branch existente:
+3) Como mudar de branch:
 - git branch (para listar todas as branches existentes)
 - git checkout nome-da-branch ou git switch nome-da-branch(para trocar para a branch desejada)
-- Switched to branch 'master'
-- Your branch is up to date with 'origin/master'.
 
 ```text
-***********************************************************************************************************************
+****************************************************************************************************************************
 ```
 
 ## Como fazer um fork:
@@ -273,7 +270,7 @@ Você já pode:
 - E enviar para o seu fork com: git push origin main
 
 ```text
-***********************************************************************************************************************
+****************************************************************************************************************************
 ```
 
 ## CRIAR UM PULL REQUEST (PR) NO GITHUB:
@@ -313,7 +310,7 @@ Dicas:
 ```
 
 ```text
-***********************************************************************************************************************
+****************************************************************************************************************************
 ```
 
 ## COMO APAGAR UMA BRANCH
@@ -324,7 +321,7 @@ Como a branch já existe, apague assim:
 - Deletar branch local (SE NÃO estiver nela)
 - git branch -D nome-da-branch
 
-Obs: Se você estiver dentro da branch, mude para outra antes:
+Porém se você estiver dentro da branch, mude para outra antes:
 - git checkout nome-da-branch ou ou git switch nome-da-branch
 - git branch -D nome-da-branch
 
@@ -334,7 +331,7 @@ Se a branch também existe no seu GitHub, apague assim:
 - git push origin --delete nome-da-branch
 
 ```text
-***********************************************************************************************************************
+****************************************************************************************************************************
 ```
 
 ## CRIANDO UM NOVO REPOSITÓRIO NO GITHUB
@@ -359,7 +356,7 @@ git branch -M main
 git push -u origin main  
 
 ```text
-***********************************************************************************************************************
+****************************************************************************************************************************
 ```
 
 ## SINTAXE BÁSICA DE FORMATAÇÃO MARKDOWN(.md)
