@@ -434,3 +434,7 @@ Qual tipo de "reset" usar?
 - Apaga o commit e o código ← NÃO USE aqui
 
 Para separar commits, use sempre soft ou normal (sem opção).
+
+```text
+****************************************************************************************************************************
+```
