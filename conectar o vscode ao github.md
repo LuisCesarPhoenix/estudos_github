@@ -5,9 +5,9 @@
 ```text
 a) Conta no GitHub: Se você ainda não tem uma, crie uma conta gratuita em https://github.com
 b) Git instalado: O Git é essencial para controlar as versões do seu código. Você pode baixá-lo em https://git-scm.com/
-c) VS Code instalado: Certifique-se de ter o Visual Studio Code instalado no seu computador. Você pode baixá-lo em 
+c) VS Code instalado: Certifique-se de ter o Visual Studio Code instalado no seu computador. Você pode baixá-lo em
 https://code.visualstudio.com/download
-d) Extensão GitHub: Após baixar e instalar o VS Code, instale a extensão "GitHub Pull Requests and Issues" no VS Code para 
+d) Extensão GitHub: Após baixar e instalar o VS Code, instale a extensão "GitHub Pull Requests and Issues" no VS Code para
 facilitar a integração com o GitHub.
 ```
 
@@ -18,7 +18,7 @@ b) Dê um nome ao seu repositório (por exemplo, "meu-projeto").<br/>
 c) Você pode adicionar uma descrição (opcional).<br/>
 d) Escolha se o repositório será público ou privado.<br/>
 e) Marque a opção "Add a README file" (Adicionar um arquivo README) para criar um arquivo de documentação inicial.<br/>
-f) Clique em "Create repository" (Criar repositório).  
+f) Clique em "Create repository" (Criar repositório).
 
 ### Passo 2: Inicializar o Git no repositório local do seu projeto (VS Code)
 
@@ -26,7 +26,7 @@ a) Logue com a sua conta do GitHub no VS Code.<br/>
 b) Abra a pasta do seu projeto no VS Code.<br/>
 c) Abra o terminal integrado do VS Code (Visualizar > Terminal > New terminal ou CTRL + J).<br/>
 - observação: ALT + Z quebra a linha.<br/>
-d) No terminal, execute o seguinte comando para inicializar um repositório Git dentro do repositório local do seu projeto: 
+d) No terminal, execute o seguinte comando para inicializar um repositório Git dentro do repositório local do seu projeto:
 - git init<br/>
 e) dê os seguintes comandos no git:
 - config --global user.email "cesarrodriguesgoncalves@hotmail.com" (substitua pelo seu email)
@@ -38,33 +38,33 @@ Observação:
 
 ### Passo 3: Conectar o repositório local ao repositório remoto (GitHub)
 
-a) Dentro do repositório que você criou no GitHub, clique no botão verde escrito Code e copie a URL do repositório. A URL (HTTPS 
+a) Dentro do repositório que você criou no GitHub, clique no botão verde escrito Code e copie a URL do repositório. A URL (HTTPS
 ou SSH) do repositório termina com .git<br/>
 b) No terminal do VSCode, execute o seguinte comando:
-- git remote add origin https://github.com/LuisCesarPhoenix/curso-youtube-react-next-typescript.git   
+- git remote add origin https://github.com/LuisCesarPhoenix/curso-youtube-react-next-typescript.git
 - substitua pela URL do seu repositório.
 
 ### Passo 4: Adicionar e commitar os arquivos
 
-a) Use o comando git add caminhnho-do-arq/diretório/arquivo para adicionar os arquivos do seu projeto à área de preparação do Git.  
+a) Use o comando git add caminhnho-do-arq/diretório/arquivo para adicionar os arquivos do seu projeto à área de preparação do Git.
 Exemplo: git add src/controllers/migrationController.js<br/>
-b) Use o comando git commit -m "Mensagem inicial do commit" para criar um commit para cada arquivo. Substitua "Mensagem inicial do 
+b) Use o comando git commit -m "Mensagem inicial do commit" para criar um commit para cada arquivo. Substitua "Mensagem inicial do
 commit" por uma mensagem descritiva.
 - Exemplo: git commit -m "Corrigida conexão no migrationController.js"
 
 ### Passo 5: Enviar os arquivos para o GitHub
 
-- Use o comando git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub. 
-- No meu caso eu usei o master, mas você pode substituir. 
+- Use o comando git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub.
+- No meu caso eu usei o master, mas você pode substituir.
 - Porém o mais indicado é criar uma branch de trabalho para cada atualização e depois de revisar, discutir e mesclar as alterações à branch principal, excluir essa branch temporária.
-- Para criar uma branch diferente, antes de fazer um git push, você pode executar o comando git checkout -b nome-da-branch 
+- Para criar uma branch diferente, antes de fazer um git push, você pode executar o comando git checkout -b nome-da-branch
 - Em seguida executa o comando git branch para saber qual branch está sendo usada e depois você executa o comando git push -u origin nome-da-branch.
 
 ### Passo 6: Sincronizar alterações futuras
 
 Sempre que você fizer alterações no seu código no VS Code:<br/>
 a) Use git add caminhnho-do-arq./diretório/arquivo para adicionar as alterações.<br/>
-- Exemplo: git add src/config/mongoConfig.js  
+- Exemplo: git add src/config/mongoConfig.js
 b) Use o comando git commit -m "Mensagem descritiva das alterações" para criar um novo commit.<br/>
 - Exemplo: git commit -m "Refatorado método queryMongoDB para melhorar reutilização"
 c) Use git push -u origin nome-da-branch para enviar seus commits para o repositório remoto no GitHub.
@@ -72,10 +72,10 @@ c) Use git push -u origin nome-da-branch para enviar seus commits para o reposit
 ### Dicas adicionais:
 
 ```text
--Arquivo .gitignore: Crie um arquivo .gitignore na raiz do seu projeto para ignorar arquivos e pastas que você não quer enviar 
+-Arquivo .gitignore: Crie um arquivo .gitignore na raiz do seu projeto para ignorar arquivos e pastas que você não quer enviar
 para o GitHub (por exemplo, arquivo de configuração de variáveis de ambiente(.env), pastas de dependências,etc).
 -Branches: Use branches para desenvolver novas funcionalidades ou corrigir bugs sem afetar a versão principal do seu código.
--Pull requests(Solicitação de pull): Use pull requests para revisar e discutir as alterações antes de mesclá-las à branch 
+-Pull requests(Solicitação de pull): Use pull requests para revisar e discutir as alterações antes de mesclá-las à branch
 principal.
 ```
 
@@ -84,7 +84,7 @@ principal.
 ### 1) Fazendo commits para cada arquivo:
 
 a) Usando o Terminal (Manual para cada Arquivo)<br/>
-Se quiser descrever alterações separadamente para cada arquivo modificado, pode adicionar os arquivos individualmente e fazer 
+Se quiser descrever alterações separadamente para cada arquivo modificado, pode adicionar os arquivos individualmente e fazer
 commits distintos:
 - git add src/controllers/migrationController.js
 - git commit -m "Corrigida conexão no migrationController.js"
@@ -124,31 +124,31 @@ git push
 a) Caso seja uma versão de patch:
 - npm version patch
 - v1.0.0 versão inicial
-- v1.0.1 versão atualizada 
+- v1.0.1 versão atualizada
 
 A versão patch normalmente é usada para atualizações pequenas, correções, etc...
 
 b) Caso seja uma versão minor:
 - npm version minor
 - v1.0.0 versão inicial
-- v1.1.0 versão atualizada 
+- v1.1.0 versão atualizada
 
 A versão minor normalmente é usada quando você adiciona alguma funcionalidade ou novo componente.
 
 c) Caso seja uma versão major:
 - npm version major
 - v1.0.0 versão inicial
-- v2.0.0 versão atualizada 
+- v2.0.0 versão atualizada
 
-A versão major normalmente é usada para atualizações significativas, que normalmente podem modificar dependências e tornar a 
+A versão major normalmente é usada para atualizações significativas, que normalmente podem modificar dependências e tornar a
 aplicação incompatível com algum outro sistema.
 
 Exemplo:<br/>
-A aplicação está disponível com packages compatíveis com node 20, porém você adiciona um pacote que depende do node 22, 
-isso pode acarretar incompatibilidade com projetos que usam o node 20. Então você atualiza para a versão major.
+A aplicação está disponível com packages compatíveis com node 20, porém você adiciona um pacote que depende do node 22,
+isso pode acarretar em incompatibilidade com projetos que usam o node 20. Então você atualiza para a versão major.
 
-Depois de fazer um dos 3 versionamentos(npm version patch, npm version minor ou npm version major), você executa o seguinte 
-comando: 
+Depois de fazer um dos 3 versionamentos(npm version patch, npm version minor ou npm version major), você executa o seguinte
+comando:
 - git push -u origin nome-da-branch --tags
 
 Caso você esteja confiante na atualização, você pode enviar a nova tag direto para o master(ou main):
@@ -156,9 +156,9 @@ Caso você esteja confiante na atualização, você pode enviar a nova tag diret
 
 Caso tenha algum erro, você pode voltar para a versão anterior executando o checkout:<br/>
 Exemplo:<br/>
-Existem duas versões, a antiga(v1.0.1) e a nova(v1.0.2), caso tenha ocorrido alguma falha na v1.0.2, você executa o 
+Existem duas versões, a antiga(v1.0.1) e a nova(v1.0.2), caso tenha ocorrido alguma falha na v1.0.2, você executa o
 checkout na versão v1.0.1
-- git checkout v1.0.1 
+- git checkout v1.0.1
 
 ```text
 ****************************************************************************************************************************
@@ -173,9 +173,9 @@ checkout na versão v1.0.1
 2) Digite "Git: Clone":
 - Na Paleta de Comandos, digite "Git: Clone" e selecione a opção correspondente.
 3) Forneça a URL do Repositório:
-- Você será solicitado a fornecer a URL do repositório Git que deseja clonar. Cole a URL do repositório GitHub que você copiou 
+- Você será solicitado a fornecer a URL do repositório Git que deseja clonar. Cole a URL do repositório GitHub que você copiou
 anteriormente.
-4) Login no Github: 
+4) Login no Github:
 - Se você estiver logado no github pelo VS code, ele apresentará seus repositórios para clonagem, facilitando o processo.
 5) Escolha o Diretório de Destino:
 - Selecione a pasta onde você deseja clonar o repositório.
@@ -185,15 +185,15 @@ anteriormente.
 
 Dicas adicionais:<br/>
 
-1) Extensão Git: 
+1) Extensão Git:
 - O VS Code possui suporte integrado para Git, mas certifique-se de que a extensão Git esteja habilitada.
-- Você também pode usar o terminal integrado do VS Code para executar o comando git clone diretamente. 
+- Você também pode usar o terminal integrado do VS Code para executar o comando git clone diretamente.
 - Para abrir o terminal, pressione Ctrl + j ou Visualizar(...) > Terminal > New terminal(Windows/Linux) ou Cmd + j (Mac).
 
 2) Branches de trabalho:
 - É melhor criar branches de acordo com o assunto que você está alterando.
-- Criar branches específicas para cada funcionalidade ou correção ajuda a manter o repositório organizado e facilita a revisão de 
-código. 
+- Criar branches específicas para cada funcionalidade ou correção ajuda a manter o repositório organizado e facilita a revisão de
+código.
 
 3) Como mudar de branch:
 - git branch (para listar todas as branches existentes)
@@ -212,9 +212,9 @@ Pré-requisitos:
 
 a) Conta no GitHub: Se você ainda não tem uma, crie uma conta gratuita em https://github.com
 b) Git instalado: O Git é essencial para controlar as versões do seu código. Você pode baixá-lo em https://git-scm.com/
-c) VS Code instalado: Certifique-se de ter o Visual Studio Code instalado no seu computador. Você pode baixá-lo em 
+c) VS Code instalado: Certifique-se de ter o Visual Studio Code instalado no seu computador. Você pode baixá-lo em
 https://code.visualstudio.com/download
-d) Extensão GitHub: Após baixar e instalar o VS Code, instale a extensão "GitHub Pull Requests and Issues" no VS Code para 
+d) Extensão GitHub: Após baixar e instalar o VS Code, instale a extensão "GitHub Pull Requests and Issues" no VS Code para
 facilitar a integração com o GitHub.
 ```
 
@@ -235,7 +235,7 @@ A) Crie uma pasta no seu notebook com o nome do seu fork:
 B) Abra a pasta do seu projeto no VS Code ou clique com o botão direito dentro da pasta e escolha a opção abrir com o VS Code.
 C) Abra o terminal integrado do VS Code (Visualizar > Terminal > New terminal ou CTRL + J) e escolha a opção Git bash.
 - Observação: ALT + Z quebra a linha.
-D) No terminal, execute o seguinte comando para inicializar um repositório Git dentro do repositório local do seu projeto: 
+D) No terminal, execute o seguinte comando para inicializar um repositório Git dentro do repositório local do seu projeto:
 - git init
 E) Copie a URL do seu fork:
 - No GitHub, vá para o repositório do seu fork.
@@ -280,7 +280,7 @@ A) utilize o comando git status para ver o caminho de cada arquivo alterado.
 B) Adicionar e commitar os arquivos
 - Use o comando git add caminhnho-do-arq/diretório/arquivo para adicionar os arquivos do seu projeto à área de preparação do Git.
 - Exemplo: git add src/controllers/migrationController.js
-C) Use o comando git commit -m "Mensagem inicial do commit" para criar um commit para cada arquivo. Substitua "Mensagem inicial do 
+C) Use o comando git commit -m "Mensagem inicial do commit" para criar um commit para cada arquivo. Substitua "Mensagem inicial do
 commit" por uma mensagem descritiva.
 - Exemplo: git commit -m "Corrigida conexão no migrationController.js"
 D) Acesse o seu fork no GitHub:
@@ -294,10 +294,10 @@ F) Preencha os detalhes do PR:
 G) Clique no botão "Create pull request":
 - O seu PR será criado e enviado para o repositório original.
 
-### Observação: 
+### Observação:
 
 - Eu nunca vou enviar o commit para a branch main do repositório original.
-- Eu vou criar uma branch temporária no meu repositório. 
+- Eu vou criar uma branch temporária no meu repositório.
 - git checkout -b nome-da-branch
 - Depois eu vou enviar a Pull Request da minha branch temporária para a branch secundária do repositório original.
 - Quando eu estiver enviando uma Pull Request para o fork jamais eu vou clicar no Merge
@@ -336,24 +336,24 @@ Se a branch também existe no seu GitHub, apague assim:
 
 ## CRIANDO UM NOVO REPOSITÓRIO NO GITHUB
 
-Quick setup — if you’ve done this kind of thing before  
-or  	
-https://github.com/LuisCesarPhoenix/n8n.git  
+Quick setup — if you’ve done this kind of thing before
+or
+https://github.com/LuisCesarPhoenix/n8n.git
 Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
 
 …or create a new repository on the command line
-  
-echo "# n8n" >> README.md  
-git init  
-git add README.md  
-git commit -m "first commit"  
-git branch -M main  
-git remote add origin https://github.com/LuisCesarPhoenix/n8n.git  
-git push -u origin main  
-…or push an existing repository from the command line  
-git remote add origin https://github.com/LuisCesarPhoenix/n8n.git  
-git branch -M main  
-git push -u origin main  
+
+echo "# n8n" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/LuisCesarPhoenix/n8n.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/LuisCesarPhoenix/n8n.git
+git branch -M main
+git push -u origin main
 
 ```text
 ****************************************************************************************************************************
@@ -364,7 +364,7 @@ git push -u origin main
 The default branch on the parent repository has been renamed!
 fabiopasilva1/iframe-saemas renamed its default branch main
 
-You can rename this fork's default branch to match in branch settings	
+You can rename this fork's default branch to match in branch settings
 
 master is now named main
 
@@ -382,3 +382,55 @@ git remote set-head origin -a
 ## SINTAXE BÁSICA DE FORMATAÇÃO MARKDOWN(.md)
 
 https://www.markdownguide.org/basic-syntax/
+
+```text
+****************************************************************************************************************************
+```
+
+## COMO DESFAZER UM COMMIT
+
+O que você vai fazer depende se você já enviou (push) ou não para o GitHub.
+
+Segue abaixo os dois casos:
+
+### CASO 1 — Você NÃO deu push ainda
+
+(Este é o mais simples)
+
+Você pode voltar no tempo e desfazer aquele commit gigante em vários commits separados.
+
+A) Voltar 1 commit, mantendo o código na sua máquina:
+- git reset HEAD~1
+B) Voltar 2 commits, mantendo o código na sua máquina:
+- git reset HEAD~2
+
+Isso remove o commit, mas mantém todas as alterações no working directory, como se você nunca tivesse commitado.
+
+Agora é só fazer seus commits separados:
+- git add arquivo1
+- git commit -m "Commit 1"
+- git add arquivo2
+- git commit -m "Commit 2"
+- E assim por diante.
+
+### CASO 2 — Você JÁ deu push para o GitHub
+
+Você ainda pode desfazer, mas é mais delicado.
+
+Se ninguém mais usa esse branch:
+- git reset --soft HEAD~1
+- git push --force
+
+IMPORTANTE:
+--force sobrescreve o histórico remoto.
+Use apenas se for seu branch pessoal.
+
+Qual tipo de "reset" usar?
+1) --soft	
+- Apaga o commit, mas mantém tudo staged
+2) sem opções	
+- Apaga o commit, deixa tudo unstaged
+3) --hard	
+- Apaga o commit e o código ← NÃO USE aqui
+
+Para separar commits, use sempre soft ou normal (sem opção).
