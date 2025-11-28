@@ -359,6 +359,26 @@ git push -u origin main
 ****************************************************************************************************************************
 ```
 
+## The default branch has been renamed!
+
+The default branch on the parent repository has been renamed!
+fabiopasilva1/iframe-saemas renamed its default branch main
+
+You can rename this fork's default branch to match in branch settings	
+
+master is now named main
+
+If you have a local clone, you can update it by running the following commands.
+
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+
+```text
+****************************************************************************************************************************
+```
+
 ## SINTAXE BÁSICA DE FORMATAÇÃO MARKDOWN(.md)
 
 https://www.markdownguide.org/basic-syntax/
